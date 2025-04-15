@@ -1,0 +1,32 @@
+function x= compose (note, Fs, T, Amp) 
+switch note 
+case 'A' 
+f=220; 
+case 'As' 
+f=233; 
+case 'B' 
+f=247; 
+case 'C' 
+f=262; 
+case 'Cs' 
+f=277; 
+case 'D' 
+f=294; 
+case 'Ds' 
+f=311; 
+case 'E' 
+f=330; 
+case 'F' 
+f=349; 
+case 'C5' 
+f=529; 
+case 'Bb' 
+f=466; 
+case 'G' 
+f=392; 
+end 
+Ts=1/Fs; 
+t=[0:1/T*Fs]*Ts; 
+ph=0; 
+x=Amp*sin(2*pi*f*t + ph); 
+end
