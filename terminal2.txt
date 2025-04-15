@@ -1,0 +1,10 @@
+C=compose('C', 5000,1,1); 
+D=compose('D', 5000,1,1); 
+E=compose('E', 5000,1,1); 
+F=compose('F', 5000,1,1); 
+G=compose('G', 5000,1,1); 
+Bb=compose('Bb', 5000,1,1); 
+A=compose('A', 5000,1,1); 
+C5=compose('C5', 5000,1,1); 
+kompoziraj=[C C D C F E C C D C G F C C C5 A F E D Bb Bb A F G F]; 
+soundsc(kompoziraj) 
