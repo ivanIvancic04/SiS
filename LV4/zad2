@@ -1,0 +1,16 @@
+f = im2double(imread('lenna.bmp')); 
+f_gray = rgb2gray(f); 
+
+A1= 1/9*[1 1 1; 1 1 1; 1 1 1]; 
+A2= [-1 -1 -1; -1 8 -1; -1 -1 -1]; 
+A3= 1/256 * [1 4 6 4 1; 4 16 24 16 4; 6 24 36 24 6; 4 16 24 16 4; 1 4 6 4 1]; 
+A4= [0 -0.5 0; -0.5 3 -0.5; 0 -0.5 0]; 
+
+out= conv2(f_gray, A4); 
+subplot(1, 2, 1) 
+imshow(f_gray) 
+title('original') 
+subplot(1, 2,2) 
+imshow(out) 
+title('konvoluirana') 
+imwrite(out, 'C:\Users\student\Downloads\SIS_LV4-assets\lenna.bmp_A4.jpg')
